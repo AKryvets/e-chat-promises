@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>E-Chat</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+
+<body>
+    <div class="container">
+        <div class="container__header header hidden">
+            <div class="header__logo logo">
+                <div class="logo__logo"></div>
+                <div class="logo__name">e-chat</div>
+            </div>
+            <div class="header__menu menu">
+                <div class="menu__settings button" title="Изменить имя пользователя">
+                    <div class="button__img" id="gear-button"></div>
+                </div>
+                <div class="menu__users-list button" id="menuUsersList" title="Список пользователей online">0</div>
+            </div>
+        </div>
+        <div class="container__overlay overlay" id="overlay"></div>
+        <div class="container__body body">
+            <div class="body__history history" id="history">
+                <div class="history__messages" id="messageHistory">
+                </div>
+                <div class="history__footer footer">
+                    <div class="footer__field field">
+                        <textarea class="field__input" id="inputField" placeholder="Введите сообщение" maxlength="500"
+                            ></textarea>
+                        <div class="field__button" id="sendButton" title="Отправить"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="body__users-list" id="usersList"></div>
+        </div>
+        <div class="container__modal-window modal-window" id="modalWindow">
+            <span class="modal-window__close" id="closeButton">✖</span>
+            <div class="modal-window__label">ИЗМЕНИТЬ ИМЯ</div>
+            <div class="modal-window__form forms">
+                <div class="forms__input form">
+                    <input type="text" class="form__input" id="nickname" placeholder="Введите имя" maxlength="12"
+                        required>
+                    <div class="form__error" id="error"></div>
+                </div>
+                <div class="forms__label label">
+                    <div class="label__labels labels">
+                        <div class="labels__your-ip">ВАШ IP:</div>
+                        <div class="labels__ip-number" id="ip"></div>
+                    </div>
+                    <button class="label__submit" id="setNickname" disabled = "disabled">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-entry" id="containerEntry">
+        <div class="container__header header">
+            <div class="header__logo logo">
+                <div class="logo__logo"></div>
+                <div class="logo__name">e-chat</div>
+            </div>
+        </div>
+        <div class="container-entry__modal-entry-window modal-entry-window" id="modalEntryWindow">
+            <div class="modal-entry-window__label">ДОБРО ПОЖАЛОВАТЬ!</div>
+            <div class="modal-entry-window__form forms">
+                <div class="forms__input form">
+                    <input type="text" class="form__input" id="nicknameEntry" placeholder="Введите имя" maxlength="12"
+                        required>
+                    <input type="password" class="form__input" id="passwordEntry" placeholder="Введите пароль"
+                        maxlength="12" required>
+                    <div class="form__error" id="errorEntry">Пользователь с таким Именем и Паролем не найден</div>
+                    <div class="form__registration registration">
+                        <div class="registration__label">Нет аккаунта?</div>
+                        <div class="registration__button" id="reg"> Зарегистрироваться</div>
+                    </div>
+
+                </div>
+                <div class="forms__label label" id="field-submit">
+                    <button class="label__submit" id="entry" disabled = "disabled">Войти</button>
+                </div>
+            </div>
+        </div>
+        <div class="container-entry__modal-reg-window modal-reg-window" id="modalRegWindow">
+            <div class="modal-entry-window__label">РЕГИСТРАЦИЯ</div>
+            <div class="modal-entry-window__form forms">
+                <div class="forms__input form">
+                    <input type="text" class="form__input" id="nicknameReg" placeholder="Введите имя" maxlength="12"
+                        required>
+                    <input type="password" class="form__input" id="passwordReg" placeholder="Введите пароль"
+                        maxlength="12" required>
+                    <div class="form__error" id="errorReg"></div>
+                    <div class="form__registration registration">
+                        <div class="registration__label">Уже зарегистрированы?</div>
+                        <div class="registration__button" id="enter"> Войти</div>
+                    </div>
+                </div>
+                <div class="forms__label label" id="field-signup">
+                    <button class="label__submit" id="registration" disabled = "disabled">Зарегистрироваться</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
