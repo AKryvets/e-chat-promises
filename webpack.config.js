@@ -6,7 +6,6 @@ module.exports = {
     mode: "development",
     entry: {
         public: path.resolve(__dirname, "./src/index.js"),
-        //socket: path.resolve(__dirname, "./src/js/socket.js"),
     },
     output: {
         path: path.resolve(__dirname, "./build"),
@@ -27,9 +26,17 @@ module.exports = {
     },
     module: {
         rules: [
+            {
+                test: /\.m?js$/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                    loader: "babel-loader"
+                }
+            },
             {test: /\.html$/, use: "html-loader"},
             {test: /\.less$/, use: [CssWebpackPlugin.loader, "css-loader", "less-loader"]},
-            {test: /\.(jpe?g|png|gif|svg)$/i,
+            {
+                test: /\.(jpe?g|png|gif|svg)$/i,
                 use: [
                     {
                         loader: "file-loader",

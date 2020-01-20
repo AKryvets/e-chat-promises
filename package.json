@@ -12,19 +12,21 @@
     "type": "git",
     "url": "git+https://MelanieSyu@bitbucket.org/MelanieSyu/e-chat.git"
   },
-  "author": "Milana",
+  "babel": {
+    "presets": [
+      "@babel/env",
+      "@babel/react"
+    ]
+  },
+  "author": "Sasha",
   "license": "ISC",
   "homepage": "https://bitbucket.org/MelanieSyu/e-chat#readme",
   "dependencies": {
-    "@babel/core": "^7.7.7",
-    "@babel/preset-env": "^7.7.7",
     "aws-amplify": "^2.2.1",
     "babel-eslint": "10.0.3",
-    "babel-loader": "^8.0.6",
     "bluebird": "^3.7.2",
     "body-parser": "^1.19.0",
     "chai": "^4.2.0",
-    "css-loader": "^3.2.0",
     "dateformat": "^3.0.3",
     "esm": "^3.2.25",
     "express": "^4.17.1",
@@ -44,16 +46,14 @@
     "socket.io": "^2.3.0",
     "socket.io-client": "^2.3.0",
     "uws": "^100.0.1",
-    "webpack": "^4.41.4",
-    "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "3.10.1",
     "ws": "^7.2.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.7.7",
-    "@babel/preset-env": "^7.7.7",
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-react": "^7.8.3",
     "babel-loader": "^8.0.6",
-    "css-loader": "^3.2.0",
+    "css-loader": "^3.4.2",
     "express": "^4.17.1",
     "express-session": "^1.17.0",
     "file-loader": "^5.0.2",
@@ -66,9 +66,13 @@
     "mocha-webpack": "^1.1.0",
     "mongodb": "^3.4.1",
     "mongoose": "^5.8.3",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
     "socket.io": "^2.3.0",
     "socket.io-client": "^2.3.0",
-    "webpack": "^4.41.4",
-    "webpack-cli": "^3.3.10"
+    "style-loader": "^1.1.2",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
   }
 }
